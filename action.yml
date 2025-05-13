@@ -1,0 +1,19 @@
+name: "Check PR Action"
+description: "Validates if the current branch has an associated PR."
+author: "Erik"
+
+inputs:
+  github_token:
+    description: "GitHub token for authentication"
+    required: true
+
+outputs:
+  pr_found:
+    description: "Indicates if a PR was found"
+  pr_id:
+    description: "Pull Request ID if found"
+
+runs:
+  using: "node16"
+  main: "index.js"
+
